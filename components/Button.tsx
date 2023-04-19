@@ -1,9 +1,15 @@
 import { Button as ChakraButton } from '@chakra-ui/react'
 
 import { Label } from './Label'
-export function Button({ label }: { label: string }) {
+export function Button({
+  label,
+  onClick,
+}: {
+  label: string
+  onClick: () => void
+}) {
   return (
-    <ChakraButton>
+    <ChakraButton onClick={onClick}>
       <Label text={label} />
     </ChakraButton>
   )
