@@ -28,8 +28,8 @@ export default defineConfig(async ({ command, mode }) => {
     },
     resolve: {
       alias: {
-        react: 'https://cdn.skypack.dev/react@17',
-        'react-dom': 'https://cdn.skypack.dev/react-dom@17',
+        react: 'https://cdn.skypack.dev/react@18',
+        'react-dom': 'https://cdn.skypack.dev/react-dom@18',
       },
     },
   }
