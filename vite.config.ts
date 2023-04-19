@@ -12,20 +12,6 @@ export default defineConfig(async ({ command, mode }) => {
       dts({
         include: [`components/`],
       }),
-      importToCdn({
-        modules: [
-          {
-            name: 'react',
-            var: 'React',
-            path: 'https://cdn.skypack.dev/react',
-          },
-          {
-            name: 'react-dom',
-            var: 'ReactDOM',
-            path: 'https://cdn.skypack.dev/react-dom',
-          },
-        ],
-      }),
     ],
     build: {
       lib: {
@@ -39,6 +25,12 @@ export default defineConfig(async ({ command, mode }) => {
     },
     define: {
       'process.env.NODE_ENV': '"production"',
+    },
+    resolve: {
+      alias: {
+        react: 'https://cdn.skypack.dev/react@17',
+        'react-dom': 'https://cdn.skypack.dev/react-dom@17',
+      },
     },
   }
 })
