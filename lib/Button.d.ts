@@ -1,3 +1,3 @@
 export declare function Button({ label }: {
     label: string;
-}): JSX.Element;
+}): import("@emotion/react/jsx-runtime").JSX.Element;
