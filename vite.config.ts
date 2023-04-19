@@ -28,8 +28,9 @@ export default defineConfig(async ({ command, mode }) => {
     },
     resolve: {
       alias: {
-        react: 'https://cdn.skypack.dev/react@18',
-        'react-dom': 'https://cdn.skypack.dev/react-dom@18',
+        react: 'https://unpkg.com/react@18.2.0/umd/react.production.min.js',
+        'react-dom':
+          'https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js',
       },
     },
   }
